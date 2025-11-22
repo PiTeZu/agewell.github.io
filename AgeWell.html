@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgeWell - Smart Living for Seniors</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Merriweather -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Main Brand Color
+                            600: '#0d9488', // Hover Color
+                            800: '#115e59', // Text Color
+                            900: '#134e4a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Base Size for Seniors */
+        html {
+            font-size: 18px; /* Base font size increased for readability */
+        }
+        .phone-mockup {
+            border: 12px solid #333;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            position: relative;
+            background: white;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .phone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 25px;
+            background: #333;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-teal-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-leaf text-teal-600 text-3xl mr-3"></i>
+                    <span class="font-serif text-3xl font-bold text-teal-900">AgeWell</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-teal-900 hover:text-teal-600 font-semibold text-lg">Features</a>
+                    <a href="#how-it-works" class="text-teal-900 hover:text-teal-600 font-semibold text-lg">How it Works</a>
+                    <a href="#download" class="bg-teal-600 text-white px-6 py-2 rounded-full font-bold hover:bg-teal-700 transition text-lg">Get Access</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Text Content -->
+                <div class="text-center lg:text-left z-10">
+                    <span class="bg-teal-100 text-teal-800 px-4 py-2 rounded-full text-sm font-bold tracking-wide uppercase mb-4 inline-block">
+                        Designed for Seniors & Families
+                    </span>
+                    <h1 class="text-5xl lg:text-7xl font-serif font-bold text-teal-900 leading-tight mb-6">
+                        Healthy Living, <br>
+                        <span class="text-teal-500">Simplified.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Manage medical reports, find healthy recipes, and stay safe with one-click emergency calls. The all-in-one companion for your golden years.
+                    </p>
+                    <!-- Buttons removed here -->
+                </div>
+
+                <!-- Phone Mockup (CSS Only) -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <div class="phone-mockup w-[320px] h-[650px] bg-gray-100 flex flex-col">
+                        <div class="phone-notch"></div>
+                        <!-- App Header -->
+                        <div class="bg-teal-600 h-24 p-6 flex justify-between items-end text-white">
+                            <span class="font-bold text-xl">Good Morning!</span>
+                            <i class="fa-solid fa-user-circle text-2xl"></i>
+                        </div>
+                        <!-- App Content -->
+                        <div class="p-4 space-y-4 overflow-hidden bg-gray-50 flex-1">
+                            <!-- SOS Button -->
+                            <div class="bg-red-50 border-2 border-red-100 p-4 rounded-2xl flex items-center space-x-4 shadow-sm">
+                                <div class="bg-red-500 w-12 h-12 rounded-full flex items-center justify-center text-white shadow-md animate-pulse">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800 text-lg">Emergency SOS</h3>
+                                    <p class="text-sm text-gray-500">Call Daughter (Jane)</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Health Report -->
+                            <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                                <div class="flex justify-between items-center mb-2">
+                                    <h3 class="font-bold text-teal-800">Latest Health Report</h3>
+                                    <span class="text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded">New</span>
+                                </div>
+                                <div class="flex items-center space-x-3 text-gray-600">
+                                    <i class="fa-solid fa-file-medical text-2xl text-teal-500"></i>
+                                    <div class="text-sm">
+                                        <p>Blood Sugar: <span class="font-bold text-green-600">Normal</span></p>
+                                        <p class="text-xs">Analyzed by AI today</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Smart Recipe -->
+                            <div class="bg-white p-0 rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                                <div class="h-24 bg-orange-100 flex items-center justify-center">
+                                    <i class="fa-solid fa-bowl-food text-4xl text-orange-400"></i>
+                                </div>
+                                <div class="p-3">
+                                    <h3 class="font-bold text-gray-800">Today's Lunch</h3>
+                                    <p class="text-sm text-gray-500">Low-salt Steamed Fish</p>
+                                </div>
+                            </div>
+
+                            <!-- Chatbot -->
+                            <div class="bg-teal-50 p-3 rounded-2xl border border-teal-100 flex items-center space-x-3">
+                                <div class="bg-teal-600 w-10 h-10 rounded-full flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-robot"></i>
+                                </div>
+                                <p class="text-sm text-teal-900 font-medium">"How can I help with your health today?"</p>
+                            </div>
+                        </div>
+                        <!-- Bottom Nav -->
+                        <div class="bg-white h-16 border-t flex justify-around items-center text-gray-400 text-2xl">
+                            <i class="fa-solid fa-house text-teal-600"></i>
+                            <i class="fa-solid fa-notes-medical hover:text-teal-600"></i>
+                            <i class="fa-solid fa-comment-medical hover:text-teal-600"></i>
+                            <i class="fa-solid fa-lightbulb hover:text-teal-600"></i>
+                        </div>
+                    </div>
+                    <!-- Decorative blobs -->
+                    <div class="absolute top-20 -right-10 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 -z-10 animate-blob"></div>
+                    <div class="absolute bottom-20 -left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 -z-10 animate-blob animation-delay-2000"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-teal-900 mb-4">Everything You Need</h2>
+                <p class="text-xl text-gray-500 max-w-3xl mx-auto">Designed with large text, high contrast, and simple navigation.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-teal-50 rounded-2xl p-8 hover:shadow-lg transition border border-teal-100">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-file-medical-alt text-3xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">AI Report Analysis</h3>
+                    <p class="text-gray-600">Simply take a photo of your medical report. Our AI extracts the data and explains it in simple language.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-red-50 rounded-2xl p-8 hover:shadow-lg transition border border-red-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-phone-volume text-3xl text-red-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Emergency Contact</h3>
+                    <p class="text-gray-600">One big button to call your family or emergency services instantly. Safety is just one tap away.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-orange-50 rounded-2xl p-8 hover:shadow-lg transition border border-orange-100">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-carrot text-3xl text-orange-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Smart Recipes</h3>
+                    <p class="text-gray-600">Get daily meal recommendations based on your health conditions (e.g., low sugar, high protein).</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-blue-50 rounded-2xl p-8 hover:shadow-lg transition border border-blue-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-comments text-3xl text-blue-500"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Health Chatbot</h3>
+                    <p class="text-gray-600">Have a question about a symptom? Ask our AI assistant anytime, 24/7. No typing required, just talk.</p>
+                </div>
+
+                 <!-- Feature 5: My Smart Devices section removed here -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="py-20 bg-teal-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-serif font-bold mb-16">Simple Setup for Everyone</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="relative">
+                    <div class="text-9xl font-bold text-teal-800 absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-50">1</div>
+                    <h3 class="text-2xl font-bold relative z-10 mb-4">Get Access</h3>
+                    <p class="text-teal-200 text-lg relative z-10">Get AgeWell from the App Store. It takes less than a minute.</p>
+                </div>
+                <div class="relative">
+                    <div class="text-9xl font-bold text-teal-800 absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-50">2</div>
+                    <h3 class="text-2xl font-bold relative z-10 mb-4">Connect</h3>
+                    <p class="text-teal-200 text-lg relative z-10">Add your emergency contacts and link your smart devices.</p>
+                </div>
+                <div class="relative">
+                    <div class="text-9xl font-bold text-teal-800 absolute -top-10 left-1/2 transform -translate-x-1/2 opacity-50">3</div>
+                    <h3 class="text-2xl font-bold relative z-10 mb-4">Live Well</h3>
+                    <p class="text-teal-200 text-lg relative z-10">Enjoy daily recipes and peace of mind knowing you are safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-teal-50">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <i class="fa-solid fa-quote-left text-4xl text-teal-300 mb-6"></i>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-teal-900 mb-8 leading-snug">
+                "Since downloading AgeWell, I feel safer living alone. The recipe suggestions help me manage my diabetes without thinking too much."
+            </h2>
+            <div class="flex items-center justify-center space-x-4">
+                <div class="w-16 h-16 bg-gray-300 rounded-full overflow-hidden border-2 border-teal-500">
+                    <!-- Placeholder for User Avatar -->
+                    <i class="fa-solid fa-user text-4xl text-gray-500 mt-2"></i>
+                </div>
+                <div class="text-left">
+                    <p class="font-bold text-gray-900 text-lg">San Zhang</p>
+                    <p class="text-teal-600">AgeWell User, 72</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <section id="download" class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold text-teal-900 mb-8">Ready to live safer and healthier?</h2>
+            <!-- Button updated with link -->
+            <a href="https://www.theportal.cn/age-well" target="_blank" class="inline-block bg-teal-600 text-white text-xl px-10 py-4 rounded-full font-bold hover:bg-teal-700 transition shadow-lg animate-bounce">
+                Get Access Now
+            </a>
+            <p class="mt-6 text-gray-500">Available on iOS and Android. Free for basic use.</p>
+            
+            <div class="mt-16 pt-8 border-t border-gray-100 text-gray-400 text-sm">
+                <p>&copy; 2025 AgeWell Inc. All rights reserved.</p>
+                <div class="space-x-4 mt-2">
+                    <a href="#" class="hover:text-teal-600">Privacy Policy</a>
+                    <a href="#" class="hover:text-teal-600">Terms of Service</a>
+                    <a href="#" class="hover:text-teal-600">Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
